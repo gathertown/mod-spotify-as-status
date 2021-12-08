@@ -1,0 +1,29 @@
+{
+  "name": "mod-spotify-as-status",
+  "version": "1.0.0",
+  "description": "a Gather mod which sets your status to your currently playing track on spotify",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc -b && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gathertown/mod-spotify-as-status.git"
+  },
+  "author": "npfoss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gathertown/mod-spotify-as-status/issues"
+  },
+  "homepage": "https://github.com/gathertown/mod-spotify-as-status#readme",
+  "dependencies": {
+    "@gathertown/gather-game-client": "32.0.0",
+    "axios": "^0.24.0",
+    "isomorphic-ws": "^4.0.1",
+    "ws": "^8.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.10",
+    "typescript": "4.3.4"
+  }
+}
