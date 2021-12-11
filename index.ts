@@ -16,15 +16,17 @@ game.subscribeToConnection((connected) => console.log("connected?", connected));
 // check every 5s
 
 setInterval(async () => {
-	const res = await axios.get(
-		"https://api.spotify.com/v1/me/player/currently-playing",
-		{
+	const res = await axios
+		.get("https://api.spotify.com/v1/me/player/currently-playing", {
 			headers: {
 				"Content-Type": "application/json",
 				Authorization: `Bearer ${SPOTIFY_KEY}`,
 			},
-		}
-	);
+		})
+		.catch((e) => {
+			console.error(e);
+			process.exit(0);
+		});
 
 	console.log(res.data.item.name);
 
