@@ -1,4 +1,3 @@
-import axios from "axios";
 import { API_KEY, SPACE_ID, CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN, REFRESH_TOKEN } from "./api-key";
 import { Game } from "@gathertown/gather-game-client";
 global.WebSocket = require("isomorphic-ws");
