@@ -10,18 +10,25 @@ prereq: have NodeJS and npm installed
 
 run `npm install`
 
-put your Gather and Spotify API keys in a file named `api-key.js` like so:
+put your [Gather API key](https://gather.town/apiKeys), -spaceId, [Spotify API credentials](https://developer.spotify.com/dashboard/applications) and [-tokens](https://developer.spotify.com/console/get-users-currently-playing-track/) in a file named `api-key.js` like so:
 
 ```js
 export const API_KEY = "your-api-key-here";
-export const SPOTIFY_KEY = "your-very-long-spotify-token-here";
+export const SPACE_ID = "gatherSpaceId\\gatherSpaceName";
+export const CLIENT_ID = "your-spotify-client-id";
+export const CLIENT_SECRET = "your-spotify-client-secret";
+export const ACCESS_TOKEN =
+  "your-very-long-spotify-token-here";
+export const REFRESH_TOKEN =
+  "your-very-long-spotify-refresh-token-here";
 ```
-
-get the gather one here: https://gather.town/apiKeys
-and spotify here: https://developer.spotify.com/console/get-users-currently-playing-track/
-
-replace the `SPACE_ID` in index.ts with your own spaceId
 
 ## running
 
 `npm run start`
+
+## further information
+
+- [Gather Websocket API docs](https://gathertown.notion.site/Gather-Websocket-API-bf2d5d4526db412590c3579c36141063)
+- [Spotify dev guide: Authorization Code Flow](https://developer.spotify.com/documentation/general/guides/authorization/code-flow/)
+- [Matthew Stead's Spotify OAuth Refresher](https://github.com/matievisthekat/spotify-oauth-refresher)
