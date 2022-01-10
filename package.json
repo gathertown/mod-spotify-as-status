@@ -18,8 +18,8 @@
   "homepage": "https://github.com/gathertown/mod-spotify-as-status#readme",
   "dependencies": {
     "@gathertown/gather-game-client": "32.0.0",
-    "axios": "^0.24.0",
     "isomorphic-ws": "^4.0.1",
+    "spotify-oauth-refresher": "^1.0.8",
     "ws": "^8.2.1"
   },
   "devDependencies": {
