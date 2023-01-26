@@ -9,8 +9,8 @@ api.setAccessToken(ACCESS_TOKEN);
 api.setRefreshToken(REFRESH_TOKEN);
 
 // gather game client setup
-const game = new Game(() => Promise.resolve({ apiKey: API_KEY }));
-game.connect(SPACE_ID); // replace with your spaceId of choice
+const game = new Game(SPACE_ID, () => Promise.resolve({ apiKey: API_KEY }));
+game.connect();
 game.subscribeToConnection((connected) => console.log("connected?", connected));
 
 // check every 5s
@@ -45,13 +45,13 @@ setInterval(async () => {
   }
   else console.log("stopped listening");
 
-  game.engine.sendAction({
+  game.sendAction({
     $case: "setEmojiStatus",
     setEmojiStatus: {
       emojiStatus: emoji,
     },
   });
-  game.engine.sendAction({
+  game.sendAction({
     $case: "setTextStatus",
     setTextStatus: {
       textStatus: playing,
