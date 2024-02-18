@@ -10,9 +10,9 @@ prereq: have NodeJS and npm installed
 
 run `npm install`
 
-put your [Gather API key](https://gather.town/apiKeys), -spaceId, [Spotify API credentials](https://developer.spotify.com/dashboard/applications) and [-tokens](https://developer.spotify.com/console/get-users-currently-playing-track/) in a file named `api-key.js` like so:
+put your [Gather API key](https://gather.town/apiKeys), -spaceId, [Spotify API credentials](https://developer.spotify.com/dashboard/applications) and [-tokens](https://developer.spotify.com/console/get-users-currently-playing-track/) in a file named `api-key.ts` like so:
 
-```js
+```ts
 export const API_KEY = "your-api-key-here";
 export const SPACE_ID = "gatherSpaceId\\gatherSpaceName";
 export const CLIENT_ID = "your-spotify-client-id";
