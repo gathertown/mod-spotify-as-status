@@ -31,3 +31,4 @@ export const REFRESH_TOKEN = "your-very-long-spotify-refresh-token-here";
 - [Ben Wiz: How to create a Spotify refresh token the easy way](https://benwiz.com/blog/create-spotify-refresh-token/)
 - [Spotify dev guide: Authorization Code Flow](https://developer.spotify.com/documentation/general/guides/authorization/code-flow/)
 - [Matthew Stead's Spotify OAuth Refresher](https://github.com/matievisthekat/spotify-oauth-refresher)
+- [Alec Chen's spotify-refresh-token project]https://github.com/alecchendev/spotify-refresh-token
