@@ -1,5 +1,5 @@
 import { API_KEY, SPACE_ID, CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN, REFRESH_TOKEN } from "./api-key";
-import { Game } from "@gathertown/gather-game-client";
+import { EngineAuth, Game } from "@gathertown/gather-game-client";
 global.WebSocket = require("isomorphic-ws");
 const Updater = require("spotify-oauth-refresher");
 
@@ -9,7 +9,7 @@ api.setAccessToken(ACCESS_TOKEN);
 api.setRefreshToken(REFRESH_TOKEN);
 
 // gather game client setup
-const game = new Game(SPACE_ID, () => Promise.resolve({ apiKey: API_KEY }));
+const game = new Game(SPACE_ID, () => Promise.resolve({ apiKey: API_KEY } as EngineAuth));
 game.connect();
 game.subscribeToConnection((connected) => console.log("connected?", connected));
 
